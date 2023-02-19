@@ -12,10 +12,15 @@ Gather a list of all the systems you use on endpoints as part of your security p
 Scripts do execute inside temporary directories for legitimate purposes sometimes but you want to build a detection so you know when this happens. Use this detection as context for others. Directories you want to monitor are:
 
 %userprofile%\AppData\Local\Temp
+
 %systemroot%\Temp
+
 %systemroot%\Windows\Temp
+
 %systemroot%\Documents and Settings%username%\Local Settings\Temp
+
 %systemroot%\Documents and Settings\Default User\Local Settings\Temp
+
 %systemroot%\Documents and Settings\All Users\Local Settings\Temp
 
 ## Known bad drivers
@@ -35,8 +40,11 @@ Build a detection that identifies the services 'Windows Defender Firewall Servic
 Build a detection that identifies data being copied or moved from the following directories:
 
 \Google\Chrome\User Data\Default\Login Data
+
 \Opera Software\Opera Stable\Login Data
+
 \Mozilla\Firefox\Profiles\
+
 \Microsoft\Edge\User Data\
 
 ## Disabling of UAC
@@ -54,7 +62,9 @@ There are lots of ways to execute files using WMI and in my experience it rarely
 Deleting shadow volumes is just a default technique for most ransomware variants now so its a great way to raise red flags. Below are examples of commands:
 
 vssadmin delete shadows /all /quiet
+
 Get-WmiObject -Namespace root\cimv2 -Class Win32_ShadowCopy | Where-Object { $_.VolumeName -eq "C:\" } | ForEach-Object { $_.Delete() }
+
 wbadmin delete systemstatebackup -keepversions:0
 
 ## Device being set to safemode using bcdedit cmdline
