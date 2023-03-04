@@ -3,11 +3,12 @@ Default Detections for EDR
 
 The detections detailed below are what I attempt to establish on any EDR product I deploy or work on. Take your own considerations for criticality and datasets.
 
+Check out this post for how you work on achieving detections https://www.goblinloot.net/2023/02/writing-detections-when-stuck-with-edr.html?m=1
+
+
 ## Tampering with sensors or other security products.
 
 Gather a list of all the systems you use on endpoints as part of your security program. This could be asset management, audit or access control etc. Once you have your list work on understanding how they interact with your endpoints and what components are necessary whether its WMI, GPO client or installed agents. Write a detection that monitors for these components being tampered with such as services being disabled or registry keys being changed.
-
-Check out this post for how you work on achieving detections https://www.goblinloot.net/2023/02/writing-detections-when-stuck-with-edr.html?m=1
 
 ## Scripts inside temporary directories.
 
