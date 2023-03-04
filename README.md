@@ -7,6 +7,8 @@ The detections detailed below are what I attempt to establish on any EDR product
 
 Gather a list of all the systems you use on endpoints as part of your security program. This could be asset management, audit or access control etc. Once you have your list work on understanding how they interact with your endpoints and what components are necessary whether its WMI, GPO client or installed agents. Write a detection that monitors for these components being tampered with such as services being disabled or registry keys being changed.
 
+Check out this post for how you work on achieving detections https://www.goblinloot.net/2023/02/writing-detections-when-stuck-with-edr.html?m=1
+
 ## Scripts inside temporary directories.
 
 Scripts do execute inside temporary directories for legitimate purposes sometimes but you want to build a detection so you know when this happens. Use this detection as context for others. Directories you want to monitor are:
