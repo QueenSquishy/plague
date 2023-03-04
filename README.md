@@ -78,5 +78,7 @@ bcdedit /set safeboot {"Minimal", "AlternateShell", "Network"}
 Enumerate what RMM tools are authorised in your environment and build a detection to flag any other variations. I maintain a list of some here:
 https://github.com/QueenSquishy/Zombie/blob/main/Lists/RMM%20Tools
 
+## Newly invoking script interpreters
 
+Here you want to build a list of your processes and what they are invoking then exclude those that use script interpreters like powershell or wscript in your already existing dataset. Anything newly invoking script interpreters gets flagged.
 
