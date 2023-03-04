@@ -3,7 +3,7 @@ Default Detections for EDR
 
 The detections detailed below are what I attempt to establish on any EDR product I deploy or work on. Take your own considerations for criticality and datasets.
 
-Check out this post for how you work on achieving detections https://www.goblinloot.net/2023/02/writing-detections-when-stuck-with-edr.html?m=1
+Check out this post for how you can work on achieving detections https://www.goblinloot.net/2023/02/writing-detections-when-stuck-with-edr.html?m=1
 
 
 ## Tampering with sensors or other security products.
