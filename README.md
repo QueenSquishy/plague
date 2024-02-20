@@ -81,7 +81,19 @@ bcdedit /set safeboot {"Minimal", "AlternateShell", "Network"}
 Enumerate what RMM tools are authorised in your environment and build a detection to flag any other variations. I maintain a list of some here:
 https://github.com/QueenSquishy/Zombie/blob/main/Lists/RMM%20Tools
 
+
 ## Newly invoking script interpreters
 
 Here you want to build a list of your processes and what they are invoking then exclude those that use script interpreters like powershell or wscript in your already existing dataset. Anything newly invoking script interpreters gets flagged.
+
+# PE Files inside User Directories
+
+By default the standard user expeirence for downloading files is
+
+When in a browser the Downloads folder inside the executing users directory is presented or automatically downloaded too
+
+When using SMB related services or applications the root of the Users profile is displayed
+
+With these common factors we can say with some likleyhood a user would not download PE files to directories such as Pictures, Videos or Public. However adversaries do not opperate under these conditions so we can write a detection that captures when PE file is seen in these directories
+
 
