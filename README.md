@@ -86,7 +86,7 @@ https://github.com/QueenSquishy/Zombie/blob/main/Lists/RMM%20Tools
 
 Here you want to build a list of your processes and what they are invoking then exclude those that use script interpreters like powershell or wscript in your already existing dataset. Anything newly invoking script interpreters gets flagged.
 
-# PE Files inside User Directories
+## PE Files inside User Directories
 
 By default the standard user expeirence for downloading files is
 
